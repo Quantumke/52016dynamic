@@ -1,0 +1,204 @@
+.link :hover{
+    text-decoration: underline 1px solid;
+}
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background:#333333;
+    font-family: 'Homemade Apple', cursive
+}
+
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 0px;
+	top: 15px;
+	overflow: hidden;
+	border: none;
+	background: url(../../img/cross.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+    margin-right: 40px;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+    margin-top: 20px;
+}
+
+.overlay ul li a {
+	font-size: 54px;
+	font-weight: 300;
+	display: block;
+	color: #fff;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* Effects */
+.overlay-genie {
+	background: transparent;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s 0.2s, visibility 0s 0.6s;
+	transition: opacity 0.3s 0.2s, visibility 0s 0.6s;
+}
+
+.overlay-genie.open {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.overlay-genie svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.overlay-genie .overlay-path {
+/*	fill: rgba(153,204,51,0.9);	*/
+    fill: #333333;
+}
+
+.overlay-genie nav {
+	opacity: 0;
+	-webkit-transform: scale(0.8) translateY(-48%);
+	transform: scale(0.8) translateY(-48%);
+	-webkit-transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+	transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
+}
+
+.overlay-genie .overlay-close {
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.overlay-genie.open nav,
+.overlay-genie.open .overlay-close {
+	opacity: 1;
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.overlay-genie.open nav {
+	-webkit-transform: scale(1) translateY(-50%);
+	transform: scale(1) translateY(-50%);
+}
+
+.overlay-genie.close nav,
+.overlay-genie.close .overlay-close {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+        margin-top: 30px;
+        font-family: Courgette', cursive;
+	}.
+    overlay ul li:hover {
+        text-decoration: underline;
+	}
+
+}
+.menu-item{
+    margin-left: 85%;
+    width: 12%;
+    cursor: pointer;
+    position: fixed;
+}
+@media screen and (max-width: 600px) {
+
+    .image-open{
+    height: 50px;
+    position: absolute;
+    left: -20%;
+    margin-top: 15px;
+    }
+    .overlay .overlay-close{
+        height: 20px;
+        position: absolute;
+        left: 75%;
+        top: 30px;
+    }
+
+
+    #lg{
+        font-size: 1.5em;
+        font-weight: 700;
+        width: 100%;
+	   flex: none;
+        margin-right: 70%;
+         font-family: 'Homemade Apple', cursive;
+        background: url(../img/line.png) no-repeat 50% 100%;
+        cursor: pointer;
+    }
+    #trigger-overlay{
+        margin-left: -10%;
+position: absolute;
+margin-top: -40px;
+cursor: pointer;
+    }
+.link{
+    font-size: 3em;
+    margin-top: 30px;
+}
+    .overlay ul li a{
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+    .overlay ul li{
+/*     margin-top: 30px;*/
+        height: 10px;
+        min-height: 39px;
+    }
+#link-list{
+    margin-top: -90px;
+}
+}
